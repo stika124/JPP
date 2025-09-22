@@ -1,14 +1,5 @@
 <img src="https://cdn.myshoptet.com/usr/www.equtex-shop.cz/user/logos/equtex_logo-1.jpg">
 
-<script>
-  const params = new URLSearchParams(window.location.search);
-  const section = params.get("p");
-
-  document.querySelector(`[id^="window"]`).forEach(el => {
-    el.style.display = "none";
-  });
-  document.getElementById(`window-${section}`).style.display = "block";
-</script>
 
 <body id="bodyElement">
   <div id="menu">
@@ -25,6 +16,7 @@
   <div id="window-about">
     O nás...
   </div>
+
 
   <div id="window-contact">
     Kontakty...
@@ -50,3 +42,13 @@
     Napište nám...
   </div>
 </body>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const section = params.get("p");
+
+  document.querySelector(`[id^="window"]`).forEach(el => {
+    el.style.display = "none";
+  });
+  document.getElementById(`window-${section}`).style.display = "block";
+</script>
