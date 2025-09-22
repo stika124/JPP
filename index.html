@@ -1,1 +1,52 @@
 <img src="https://cdn.myshoptet.com/usr/www.equtex-shop.cz/user/logos/equtex_logo-1.jpg">
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const section = params.get("p");
+
+  document.querySelector(`[id^="window"]`).forEach(el => {
+    el.style.display = "none";
+  });
+  document.getElementById(`window-${section}`).style.display = "block";
+</script>
+
+<body id="bodyElement">
+  <div id="menu">
+    <button onclick="location.href = 'index.html?p=about'">O nás</button>
+    <button onclick="location.href = 'index.html?p=contact'">Kontakty</button>
+    <button onclick="location.href = 'index.html?p=opentime'">Otevírací doba</button>
+    <button onclick="location.href = 'index.html?p=shops'">Prodejny</button>
+    <button onclick="location.href = 'index.html?p=card'">Vernostní systém</button>
+    <button onclick="location.href = 'index.html?p=shopc'">Obchodní podmínky</button>
+    <button onclick="location.href = 'index.html?p=write'">Napište nám</button>
+    <button onclick="location.href = 'https://www.equtex-shop.cz'">E-shop</button>
+  </div>
+
+  <div id="window-about">
+    O nás...
+  </div>
+
+  <div id="window-contact">
+    Kontakty...
+  </div>
+
+  <div id="window-opentime">
+    Otevírací doba
+  </div>
+
+  <div id="window-shops">
+    Prodejny...
+  </div>
+
+  <div id="window-card">
+    Věrnostní systém...
+  </div>
+
+  <div id="window-shopc">
+    Obchodní podmínky...
+  </div>
+
+  <div id="window-write">
+    Napište nám...
+  </div>
+</body>
